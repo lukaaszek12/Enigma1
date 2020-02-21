@@ -8,13 +8,11 @@ import org.junit.jupiter.api.Test;
 
 public class CezarCipherTest {
     protected final String textWithNoAlphabeticLetters = "112312[]][";
-    protected final String TextWithAlphabeticLetters = "abcdd";
-    protected final String expectedTextforAlphabeticLetters = "defgg";
+    protected final String textWithAlphabeticLetters = "abcdd";
+    protected final String expectedTextForAlphabeticLetters = "defgg";
     protected final String mixedText = "123ac";
     protected final String expectedTextForMIxedLetters = "123df//";
     protected Cipher cezarCipher = new CezarCipher();
-    private String textWithAlphabeticLetters;
-    private short expectedTextForAlphabeticLetters;
 
     @DisplayName("Testing correction of encoding text with no alphabetic letters")
     @Test
