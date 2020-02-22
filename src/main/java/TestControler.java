@@ -1,6 +1,5 @@
-package ciphers;
-
-import implementation.CezarCipher;
+import ciphers.Cipher;
+import ciphers.implementation.CesarCipher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
@@ -21,7 +20,7 @@ public class TestControler implements Initializable {
     public void triggerEncoding() {
         String userText = textArea.getText();
         if (!userText.isEmpty()) ;
-        Cipher cezarCipher = new CezarCipher();
+        Cipher cezarCipher = new CesarCipher();
         String encode = cezarCipher.encode(userText);
         textArea.setText(encode);
     }
@@ -30,7 +29,7 @@ public class TestControler implements Initializable {
     public void triggerDecoding() {
         String userText = textArea.getText();
         if (!userText.isEmpty()) ;
-        Cipher cezarCipher = new CezarCipher();
+        Cipher cezarCipher = new CesarCipher();
         String decode = cezarCipher.decode(userText);
         textArea.setText(decode);
     }

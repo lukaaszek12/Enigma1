@@ -1,6 +1,5 @@
-package ciphers;
-
-import implementation.CezarCipher;
+import ciphers.Cipher;
+import ciphers.implementation.CesarCipher;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,7 +38,7 @@ public class Test2Main extends Application {
     public void triggerEncoding() {
         String userText = textArea.getText();
         if (!userText.isEmpty()) ;
-        Cipher cezarCipher = new CezarCipher();
+        Cipher cezarCipher = new CesarCipher();
         String encode = cezarCipher.encode(userText);
         textArea.setText(encode);
     }

@@ -1,7 +1,7 @@
 package Ciphers;
 
 import ciphers.Cipher;
-import implementation.CezarCipher;
+import ciphers.implementation.CesarCipher;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ public class CezarCipherTest {
     protected final String expectedTextForAlphabeticLetters = "defgg";
     protected final String mixedText = "123ac";
     protected final String expectedTextForMIxedLetters = "123df//";
-    protected Cipher cezarCipher = new CezarCipher();
+    protected Cipher cezarCipher = new CesarCipher();
 
     @DisplayName("Testing correction of encoding text with no alphabetic letters")
     @Test

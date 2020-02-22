@@ -1,8 +1,8 @@
-package implementation;
+package ciphers.implementation;
 
 import ciphers.Cipher;
 
-public class CezarCipher implements Cipher {
+public class CesarCipher implements Cipher {
     @Override
     public String encode(String textToEncode) {
         return encodeOrDecode(textToEncode, true);
