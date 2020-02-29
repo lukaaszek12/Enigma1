@@ -1,3 +1,5 @@
+package aplication;
+
 import ciphers.Cipher;
 import ciphers.implementation.CesarCipher;
 import javafx.application.Application;
@@ -10,35 +12,22 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
+    public static Stage mainStage;
     String resourcePath = "/fxml/Main.fxml";
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        mainStage = primaryStage;
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(resourcePath));
         Parent root = loader.load();
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root);
         primaryStage.setTitle("Enigma");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    @FXML
-    TextArea textArea;
-
-    public TextArea getTextArea() {
-        return textArea;
-    }
-
-    public void getTextArea(TextArea textArea) {
-        this.textArea = textArea;
-    }
-
-    @FXML
-    public void triggerEncoding() {
-        String userText = textArea.getText();
-        if (!userText.isEmpty()) ;
-        Cipher cezarCipher = new CesarCipher();
-        String encode = cezarCipher.encode(userText);
-        textArea.setText(encode);
+    public static Stage getMainStage() {
+        return mainStage;
     }
 }
