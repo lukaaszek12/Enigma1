@@ -9,8 +9,8 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 
-public class Test2Main extends Application {
-    String resourcePath = "/fxml/Test.fxml";
+public class Main extends Application {
+    String resourcePath = "/fxml/Main.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -20,7 +20,6 @@ public class Test2Main extends Application {
         primaryStage.setTitle("Enigma");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
     @FXML
